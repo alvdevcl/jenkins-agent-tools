@@ -53,7 +53,7 @@ USER root
 # variable "VERSION" must be passed as docker environment variables during the image build
 # docker build --no-cache --build-arg VERSION=2.12.0 -t alpine/helm:2.12.0 .
 
-ARG VERSION
+ARG VERSION=2.12.0
 
 # ENV BASE_URL="https://storage.googleapis.com/kubernetes-helm"
 ENV BASE_URL="https://get.helm.sh"
