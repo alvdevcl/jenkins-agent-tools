@@ -41,7 +41,6 @@ RUN set -ex && \
     mkdir -p /usr/share/man/man1/ && \
     touch /usr/share/man/man1/sh.distrib.1.gz
 
-    wget -q https://github.com/mikefarah/yq/releases/download/v4.41.1/yq_linux_amd64 -O ./yq && chmod +x ./yq
     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
     chmod 700 get_helm.sh
     ./get_helm.sh
