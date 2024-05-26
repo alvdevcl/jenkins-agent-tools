@@ -72,8 +72,6 @@ RUN case `uname -m` in \
     chmod +x /usr/bin/helm && \
     rm -rf linux-${ARCH}
 
-WORKDIR /apps
-
 USER jenkins
 
 RUN git config --global user.email "dev+jenkins@dwolla.com" && \
