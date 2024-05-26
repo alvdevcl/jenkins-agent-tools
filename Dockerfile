@@ -74,8 +74,5 @@ RUN case `uname -m` in \
 
 USER jenkins
 
-RUN git config --global user.email "dev+jenkins@dwolla.com" && \
-    git config --global user.name "Jenkins Build Agent" && \
-    git config --global init.defaultBranch main
 
 ENTRYPOINT ["jenkins-agent"]
