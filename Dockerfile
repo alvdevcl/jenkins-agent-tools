@@ -23,9 +23,7 @@ RUN set -ex && \
         git \
         gpg \
         jq \
-        yq \
         make \
-        wget \
         python3 \
         python3-pip \
         python3-venv \
@@ -41,10 +39,6 @@ RUN set -ex && \
     rm -rf /tmp/build && \
     mkdir -p /usr/share/man/man1/ && \
     touch /usr/share/man/man1/sh.distrib.1.gz
-
-RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 && \
-    chmod 700 get_helm.sh && \
-    ./get_helm.sh
 
 # change /bin/sh to use bash, because lots of our scripts use bash features
 RUN echo "dash dash/sh boolean false" | debconf-set-selections && \
